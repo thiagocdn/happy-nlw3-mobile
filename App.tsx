@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, { Marker, Callout, PROVIDER_GOOGLE } from 'react-native-maps';
 
 import mapMarker from './src/images/map_marker.png';
 
@@ -24,7 +24,11 @@ export default function App() {
               latitude: -22.9722666,
               longitude: -46.9902287
             }}
-          />
+          >
+            <Callout>
+              <Text>Lar das Meninas</Text>
+            </Callout>
+          </Marker>
         </MapView>
     </View>
   );
